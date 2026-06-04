@@ -1,0 +1,19 @@
+[project]
+name = "torch-vector-search"
+version = "0.1.0"
+description = "GPU-accelerated vector search index using PyTorch"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-benchmark>=4.0"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
